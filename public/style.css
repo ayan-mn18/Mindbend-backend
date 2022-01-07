@@ -10,6 +10,9 @@ body{
     align-items: center;
     justify-content: center;
     margin: 3rem;
+    color: white;
+    background: url(./desk.png);
+    background-size: auto;
 }
 
 .user_details{
@@ -30,7 +33,7 @@ body{
 .referral_code{
     margin: 1rem 0;
     padding: 1rem;
-    background-color: rgb(45, 9, 128);
+    background-color: #0a112d;
     color: white;
     border-radius: 2rem;
     text-align: center;
@@ -55,7 +58,7 @@ body{
     font-size: 1rem;
     color: white;
     padding: 0.5rem 2rem;
-    background-color: rgb(23, 0, 107);
+    background-color: #0a112d;
     border-radius: 0.3rem;
     margin: 2rem;
 }
@@ -65,4 +68,20 @@ body{
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
+}
+@media (max-width: 800px){
+    .login{
+        justify-content: center;
+        flex-direction: column;
+        margin-top: 3rem;
+    }
+}
+
+.login_desc{
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.cta_desc{
+    text-align: center;
 }

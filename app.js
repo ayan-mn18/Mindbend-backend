@@ -9,7 +9,7 @@ const cookieParser = require("cookie-parser");
 const { process_params } = require("express/lib/router");
 const {OAuth2Client} = require('google-auth-library');
 const res = require("express/lib/response");
-const CLIENT_ID = process.env.CLIENT_ID || '24401141316-b15q4djpt8irdtbm0ejguvcjpkk44l6g.apps.googleusercontent.com';
+const CLIENT_ID = process.env.CLIENT_ID || '24401141316-tec44kq4irc0hfg7kkpoaeb5r012dqkk.apps.googleusercontent.com';
 const client = new OAuth2Client(CLIENT_ID);
 const { v4: uuidv4 } = require('uuid');
 
@@ -41,7 +41,7 @@ app.get('/' , (req,res) =>{
 })
 
 app.get('/login' ,(req,res)=>{
-    res.render('login');
+    res.render('login' , {CLIENT_ID});
 })
 
 app.post('/login' , (req,res) =>{
@@ -59,7 +59,9 @@ app.post('/login' , (req,res) =>{
         res.cookie('session-token', token );
         res.send('success');
     })
-    .catch(console.error);
+    .catch((error) =>{
+        console.log("error");
+    });
 })
 
 app.get('/profile' ,checkAuthenticated , addReferralCode ,async (req,res)=>{

@@ -12,8 +12,9 @@ const res = require("express/lib/response");
 const CLIENT_ID ='24401141316-b15q4djpt8irdtbm0ejguvcjpkk44l6g.apps.googleusercontent.com';
 const client = new OAuth2Client(CLIENT_ID);
 const { v4: uuidv4 } = require('uuid');
+
 // require('./passport');
-const PORT = 8080;
+const PORT = process.env.PORT || 5000;
 
 const app = express();
 

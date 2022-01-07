@@ -1,7 +1,68 @@
 *{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 body{
-    background: '#000000';
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 3rem;
+}
+
+.user_details{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 2rem 0;
+}
+
+.profile_img{
+    border-radius: 100%;
+    margin-right: 3rem;
+}
+.info{
+    margin: 1rem 0;
+}
+.referral_code{
+    margin: 1rem 0;
+    padding: 1rem;
+    background-color: rgb(45, 9, 128);
+    color: white;
+    border-radius: 2rem;
+    text-align: center;
+}
+.sign_out{
+    color: rgb(112, 112, 112);
+    margin: 2rem 0;
+    padding: 1rem;
+}
+
+.login_text{
+    margin: 2rem 0;
+}
+
+.title{
+    font-size: 2rem;
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.login_button{
+    font-size: 1rem;
+    color: white;
+    padding: 0.5rem 2rem;
+    background-color: rgb(23, 0, 107);
+    border-radius: 0.3rem;
+    margin: 2rem;
+}
+.login{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }

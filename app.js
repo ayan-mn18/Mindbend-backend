@@ -9,10 +9,9 @@ const cookieParser = require("cookie-parser");
 const { process_params } = require("express/lib/router");
 const {OAuth2Client} = require('google-auth-library');
 const res = require("express/lib/response");
-const CLIENT_ID = process.env.CLIENT_ID || '24401141316-tec44kq4irc0hfg7kkpoaeb5r012dqkk.apps.googleusercontent.com';
+const CLIENT_ID = '24401141316-tec44kq4irc0hfg7kkpoaeb5r012dqkk.apps.googleusercontent.com';
 const client = new OAuth2Client(CLIENT_ID);
 const { v4: uuidv4 } = require('uuid');
-console.log(CLIENT_ID)
 
 // require('./passport');
 const PORT = process.env.PORT || 5000;

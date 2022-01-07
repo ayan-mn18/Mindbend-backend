@@ -10,7 +10,7 @@ const { process_params } = require("express/lib/router");
 const {OAuth2Client} = require('google-auth-library');
 const res = require("express/lib/response");
 const CLIENT_ID ='24401141316-b15q4djpt8irdtbm0ejguvcjpkk44l6g.apps.googleusercontent.com';
-const client = new OAuth2Client(CLIENT_ID);
+const client = new OAuth2Client(process.env.CLIENT_ID || CLIENT_ID);
 const { v4: uuidv4 } = require('uuid');
 
 // require('./passport');

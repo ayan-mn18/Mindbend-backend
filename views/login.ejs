@@ -36,6 +36,7 @@
             console.log('Signed in as: ' + xhr.responseText);
             if(xhr.responseText ==='success'){
                 signOut();
+                console.log("object");
                 location.assign('/profile');
             }
             };
